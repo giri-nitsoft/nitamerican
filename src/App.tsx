@@ -151,7 +151,7 @@ const App = () => {
                   Our US branch, <strong className="text-white font-bold decoration-blue-500/30 decoration-4 underline-offset-4">NIT AMERICAN</strong>, sources the latest trend brands directly from Irvine, California.
                 </p>
                 <p>
-                  Our strategic partner in Korea, <strong className="text-white font-bold decoration-purple-500/30 decoration-4 underline-offset-4">NITSOFT</strong>, ensures flawless execution through IT expertise and distribution infrastructure.
+                  Our strategic partner in Asia, <strong className="text-white font-bold decoration-purple-500/30 decoration-4 underline-offset-4">NITSOFT</strong>, ensures reliable execution through IT expertise and established distribution infrastructure.
                 </p>
               </div>
             </ScrollReveal>
@@ -185,7 +185,7 @@ const App = () => {
                       <div className="flex items-start gap-4">
                         <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0" />
                         <p className="text-sm text-gray-400 leading-relaxed">
-                          <span className="text-white font-bold">NIT AMERICAN</span> leads US operations & networking in California.
+                          <span className="text-white font-bold">NIT AMERICAN</span> leads US operations & networking.
                         </p>
                       </div>
                     </div>
