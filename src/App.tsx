@@ -37,21 +37,29 @@ const App = () => {
 
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 flex justify-between items-center">
           <motion.a
             href="#"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-2xl font-black tracking-tighter hover:opacity-80 transition flex items-center gap-2"
+            className="text-xl md:text-2xl font-black tracking-tighter hover:opacity-80 transition flex items-center gap-2"
           >
             NIT <span className="text-blue-500">AMERICAN</span>
           </motion.a>
 
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-10 text-[11px] font-black tracking-[0.2em] text-gray-400">
             <a href="#about" className="hover:text-white transition duration-300">ABOUT</a>
             <a href="#brands" className="hover:text-white transition duration-300">BRANDS</a>
             <a href="#service" className="hover:text-white transition duration-300">SERVICE</a>
             <a href="#contact" className="px-6 py-2.5 border border-white/20 rounded-full text-white hover:bg-white hover:text-black transition duration-300 tracking-[0.1em]">
+              CONTACT
+            </a>
+          </div>
+
+          {/* Mobile Nav Toggle (Simple for now) */}
+          <div className="md:hidden flex items-center">
+            <a href="#contact" className="text-[10px] font-black tracking-widest px-4 py-2 border border-white/20 rounded-full">
               CONTACT
             </a>
           </div>
@@ -87,7 +95,7 @@ const App = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-6xl md:text-[120px] font-black mb-10 tracking-[ -0.05em] leading-[0.85]"
+            className="text-4xl md:text-[120px] font-black mb-10 tracking-tight md:tracking-[-0.05em] leading-[1.1] md:leading-[0.85]"
           >
             CONNECTING<br />
             <span className="text-gradient">US TRENDS</span><br />
@@ -134,12 +142,12 @@ const App = () => {
                 <div className="h-px w-16 bg-blue-500 mr-4" />
                 <span className="text-blue-500 font-black tracking-[0.3em] text-xs uppercase">About Us</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">
+              <h2 className="text-4xl md:text-7xl font-black mb-10 leading-[1.1] md:leading-[0.9] tracking-tighter">
                 Global Vision,<br />Local Action.
               </h2>
-              <div className="space-y-10 text-xl text-gray-400 font-light leading-relaxed">
+              <div className="space-y-10 text-lg md:text-xl text-gray-400 font-light leading-relaxed">
                 <p>
-                  <span className="text-white font-black text-2xl block mb-4 tracking-tight">Dual HQ System</span>
+                  <span className="text-white font-black text-xl md:text-2xl block mb-4 tracking-tight">Dual HQ System</span>
                   Our US branch, <strong className="text-white font-bold decoration-blue-500/30 decoration-4 underline-offset-4">NIT AMERICAN</strong>, sources the latest trend brands directly from Irvine, California.
                 </p>
                 <p>
@@ -152,22 +160,22 @@ const App = () => {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000" />
                 <div className="relative bg-zinc-900/40 backdrop-blur-2xl rounded-[2rem] p-12 border border-white/10 shadow-3xl">
-                  <div className="flex justify-between items-center mb-16 relative">
-                    <div className="text-center w-1/3">
-                      <div className="text-5xl mb-4 drop-shadow-lg">🇺🇸</div>
-                      <div className="font-black text-2xl tracking-tight">USA</div>
+                  <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 mb-16 relative">
+                    <div className="text-center w-full md:w-1/3">
+                      <div className="text-4xl md:text-5xl mb-4 drop-shadow-lg">🇺🇸</div>
+                      <div className="font-black text-xl md:text-2xl tracking-tight">USA</div>
                       <div className="text-[10px] text-gray-500 tracking-widest uppercase mt-1">Irvine, CA</div>
                     </div>
-                    <div className="flex-1 px-4 relative">
+                    <div className="hidden md:block flex-1 px-4 relative">
                       <div className="h-px bg-white/10 w-full" />
                       <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 -translate-y-1/2 blur-[2px] opacity-40 animate-pulse" />
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-zinc-900 border border-white/10 px-4 py-1 rounded-full text-[9px] text-blue-400 font-black tracking-widest uppercase">
                         CONNECT
                       </div>
                     </div>
-                    <div className="text-center w-1/3">
-                      <div className="text-5xl mb-4 drop-shadow-lg">🇰🇷</div>
-                      <div className="font-black text-2xl tracking-tight">KOREA</div>
+                    <div className="text-center w-full md:w-1/3">
+                      <div className="text-4xl md:text-5xl mb-4 drop-shadow-lg">🇰🇷</div>
+                      <div className="font-black text-xl md:text-2xl tracking-tight">KOREA</div>
                       <div className="text-[10px] text-gray-500 tracking-widest uppercase mt-1">Seoul</div>
                     </div>
                   </div>
@@ -201,9 +209,9 @@ const App = () => {
       <section id="brands" className="py-32 bg-white text-black">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal variants={fadeInUp}>
-            <div className="text-center mb-24">
+            <div className="text-center mb-16 md:mb-24">
               <span className="text-blue-600 font-black tracking-[0.4em] text-xs uppercase block mb-4">Portfolio</span>
-              <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">OUR BRANDS</h2>
+              <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">OUR BRANDS</h2>
             </div>
           </ScrollReveal>
 
@@ -233,12 +241,12 @@ const App = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <ScrollReveal variants={fadeInUp}>
-            <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-white/5 pb-16">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 border-b border-white/5 pb-12 md:pb-16">
               <div className="max-w-2xl">
                 <span className="text-blue-500 font-black tracking-[0.4em] text-xs uppercase block mb-4">One-Stop Solution</span>
-                <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-[0.9]">From Discovery<br />To Expansion</h2>
+                <h2 className="text-4xl md:text-7xl font-black tracking-tight leading-[1.1] md:leading-[0.9]">From Discovery<br />To Expansion</h2>
               </div>
-              <p className="text-gray-400 mt-10 md:mt-0 max-w-sm md:text-right font-light text-lg">
+              <p className="text-gray-400 mt-8 md:mt-0 max-w-sm md:text-right font-light text-base md:text-lg">
                 Beyond simple brokerage, we provide integrated solutions covering the entire process from brand discovery to market settlement.
               </p>
             </div>
@@ -249,7 +257,7 @@ const App = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-4 gap-px bg-white/5 border border-white/5"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5"
           >
             <ServiceItem
               num="01"
@@ -284,10 +292,10 @@ const App = () => {
       </section>
 
       {/* Footer / Contact Section */}
-      <footer id="contact" className="bg-black pt-40 pb-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-32 mb-40">
+      <footer id="contact" className="bg-black pt-24 md:pt-40 pb-20 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 md:gap-32 mb-24 md:mb-40">
           <ScrollReveal variants={fadeInRight}>
-            <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter">Ready to<br />Connect?</h2>
+            <h2 className="text-4xl md:text-6xl font-black mb-12 md:text-16 tracking-tighter">Ready to<br />Connect?</h2>
             <div className="space-y-8">
               <div className="group p-8 bg-zinc-900/50 rounded-3xl border border-white/5 hover:border-blue-500/50 transition-all cursor-default">
                 <div className="flex items-center gap-3 mb-4">
@@ -395,14 +403,14 @@ const BrandCard = ({ image, category, name, description, accentColor, delay = 0 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-20 opacity-80" />
 
-        <div className="absolute bottom-0 left-0 p-12 z-30 w-full transform translate-y-6 group-hover:translate-y-0 transition duration-700">
+        <div className="absolute bottom-0 left-0 p-8 md:p-12 z-30 w-full transform translate-y-6 md:translate-y-0 group-hover:translate-y-0 transition duration-700">
           <div className="overflow-hidden">
-            <p className={`${accentClasses} font-black tracking-[0.4em] text-[10px] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100`}>
+            <p className={`${accentClasses} font-black tracking-[0.4em] text-[10px] uppercase mb-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100`}>
               {category}
             </p>
           </div>
-          <h3 className="text-5xl md:text-6xl font-black text-white italic mb-6 tracking-tighter">{name}</h3>
-          <p className="text-gray-300 text-lg max-w-sm opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 font-light leading-relaxed">
+          <h3 className="text-4xl md:text-6xl font-black text-white italic mb-4 md:mb-6 tracking-tighter">{name}</h3>
+          <p className="text-gray-300 text-base md:text-lg max-w-sm opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 font-light leading-relaxed">
             {description}
           </p>
         </div>
