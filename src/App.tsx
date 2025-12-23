@@ -95,7 +95,7 @@ const App = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-4xl md:text-[120px] font-black mb-10 tracking-tight md:tracking-[-0.05em] leading-[1.1] md:leading-[0.85]"
+            className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[120px] font-black mb-10 tracking-tight md:tracking-[-0.05em] leading-[1.0] md:leading-[0.85]"
           >
             CONNECTING<br />
             <span className="text-gradient">US TRENDS</span><br />
@@ -142,7 +142,7 @@ const App = () => {
                 <div className="h-px w-16 bg-blue-500 mr-4" />
                 <span className="text-blue-500 font-black tracking-[0.3em] text-xs uppercase">About Us</span>
               </div>
-              <h2 className="text-4xl md:text-7xl font-black mb-10 leading-[1.1] md:leading-[0.9] tracking-tighter">
+              <h2 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[72px] font-black mb-10 leading-[1.1] md:leading-[0.9] tracking-tighter">
                 Global Vision,<br />Local Action.
               </h2>
               <div className="space-y-10 text-lg md:text-xl text-gray-400 font-light leading-relaxed">
@@ -211,7 +211,7 @@ const App = () => {
           <ScrollReveal variants={fadeInUp}>
             <div className="text-center mb-16 md:mb-24">
               <span className="text-blue-600 font-black tracking-[0.4em] text-xs uppercase block mb-4">Portfolio</span>
-              <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">OUR BRANDS</h2>
+              <h2 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[80px] font-black tracking-tighter leading-none">OUR BRANDS</h2>
             </div>
           </ScrollReveal>
 
@@ -241,12 +241,12 @@ const App = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <ScrollReveal variants={fadeInUp}>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 border-b border-white/5 pb-12 md:pb-16">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-24 border-b border-white/5 pb-12 md:pb-16 gap-8">
               <div className="max-w-2xl">
                 <span className="text-blue-500 font-black tracking-[0.4em] text-xs uppercase block mb-4">One-Stop Solution</span>
-                <h2 className="text-4xl md:text-7xl font-black tracking-tight leading-[1.1] md:leading-[0.9]">From Discovery<br />To Expansion</h2>
+                <h2 className="text-[9vw] sm:text-[7vw] md:text-[5vw] lg:text-[64px] font-black tracking-tight leading-[1.1] md:leading-[0.9]">From Discovery<br />To Expansion</h2>
               </div>
-              <p className="text-gray-400 mt-8 md:mt-0 max-w-sm md:text-right font-light text-base md:text-lg">
+              <p className="text-gray-400 max-w-sm lg:text-right font-light text-base md:text-lg">
                 Beyond simple brokerage, we provide integrated solutions covering the entire process from brand discovery to market settlement.
               </p>
             </div>
@@ -293,9 +293,9 @@ const App = () => {
 
       {/* Footer / Contact Section */}
       <footer id="contact" className="bg-black pt-24 md:pt-40 pb-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 md:gap-32 mb-24 md:mb-40">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 lg:gap-32 mb-24 md:mb-40">
           <ScrollReveal variants={fadeInRight}>
-            <h2 className="text-4xl md:text-6xl font-black mb-12 md:text-16 tracking-tighter">Ready to<br />Connect?</h2>
+            <h2 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[72px] font-black mb-12 tracking-tighter leading-tight">Ready to<br />Connect?</h2>
             <div className="space-y-8">
               <div className="group p-8 bg-zinc-900/50 rounded-3xl border border-white/5 hover:border-blue-500/50 transition-all cursor-default">
                 <div className="flex items-center gap-3 mb-4">
@@ -409,7 +409,7 @@ const BrandCard = ({ image, category, name, description, accentColor, delay = 0 
               {category}
             </p>
           </div>
-          <h3 className="text-4xl md:text-6xl font-black text-white italic mb-4 md:mb-6 tracking-tighter">{name}</h3>
+          <h3 className="text-[8vw] sm:text-[6vw] md:text-[5vw] lg:text-[48px] font-black text-white italic mb-4 md:mb-6 tracking-tighter">{name}</h3>
           <p className="text-gray-300 text-base md:text-lg max-w-sm opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 font-light leading-relaxed">
             {description}
           </p>
